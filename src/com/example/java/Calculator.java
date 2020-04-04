@@ -11,28 +11,28 @@ public class Calculator {
         String string2 = getConsoleInput("Enter a numeric value: ");
         String string3 = getConsoleInput("Choose an operation (+ - * /):");
 
-        double result;
+        double calcResult;
 
         try {
             switch (string3) {
                 case "+":
-                    result = addValues(string1, string2);
+                    calcResult = addValues(string1, string2);
                     break;
                 case "-":
-                    result = subtractValues(string1, string2);
+                    calcResult = subtractValues(string1, string2);
                     break;
                 case "*":
-                    result = multiplyValues(string1, string2);
+                    calcResult = multiplyValues(string1, string2);
                     break;
                 case "/":
-                    result = divideValues(string1, string2);
+                    calcResult = divideValues(string1, string2);
                     break;
                 default:
                     System.out.println("Unrecognized operation!");
                     return;
             }
 
-            System.out.println("The answer is " + result);
+            System.out.println("The answer is " + calcResult);
 
         } catch (Exception e) {
             System.out.println("Number formatting exception " + e.getMessage());
