@@ -7,9 +7,9 @@ import static com.example.java.util.MathMethods.*;
 public class Calculator {
 
     public static void main(String[] args) {
-        String string1 = getInput("Enter a numeric value: ");
-        String string2 = getInput("Enter a numeric value: ");
-        String string3 = getInput("Choose an operation (+ - * /):");
+        String string1 = getConsoleInput("Enter a numeric value: ");
+        String string2 = getConsoleInput("Enter a numeric value: ");
+        String string3 = getConsoleInput("Choose an operation (+ - * /):");
 
         double result;
 
@@ -39,7 +39,7 @@ public class Calculator {
         }
     }
 
-    private static String getInput(String prompt) {
+    private static String getConsoleInput(String prompt) {
         System.out.print(prompt);
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
